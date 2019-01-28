@@ -1,0 +1,27 @@
+button {
+    font-size: 100%;
+    font-weight: 800;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    border: none;
+    padding: 1rem 1.2rem;
+    margin: 10px;
+    cursor: pointer;
+    background: beige;
+}
+
+button:hover {
+    background: #0053ba;
+}
+button:focus { 
+    background: #336BFF;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.80);
+}
