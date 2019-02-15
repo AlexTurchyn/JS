@@ -4,18 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pizzeria</title>
+    <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <input type="text" name="" id="text" placeholder="Томати">
-    <select name="" id="select">
-        <option value="priceUp" >Price (Low to High) </option>
-        <option value="priceDown">Price (High to Low)</option>
-        <option value="A-Z" selected>from (A To Z)</option>
-        <option value="Z-A">from (Z To A)</option>
+    <label for="select-menu-view" class="label_container">Отображать меню в виде:</label>
+    <select name="" id="select-menu-view" class="select_container">
+        <option value = "grid">Сетка</option>
+        <option value= "list">Список</option>
     </select>
+    <div id="div_ingridient" class="menu-filter">
+        <label for="text" class="label_container">Поиск пиццы по ингридиенту</label>
+        <input type="text"  id="text" placeholder="Моцарелла" class="select_container">
+    </div>
+    <div id="div_sort" class="menu-filter">
+    <label for="select" class="label_container">Сортировать:</label>
+        <select name="" id="select" class="select_container">
+            <option value="priceUp" >Цена (от дешевых к дорогим) </option>
+            <option value="priceDown">Цена (от дорогих к дешевым)</option>
+            <option value="A-Z" selected>Название От (А дo Я)</option>
+            <option value="Z-A">Название От (Я до А)</option>
+        </select>
+    </div>
+    <button id="btn_filling">Изменить состав</button>
+    <div id="additionFillings" class="hidden">
+            <div id="additionFillingsheader">Кликни чтобы перетащить</div>
+            <p>Оливки</p>
+            <p>Курица</p>
+            <p>Салями</p>
+            <p>Перец чили</p>
+            <p>Салями</p>
+            <p>Мед</p>
+            <p>Сливки</p>
+        </div>
+
+    <div id="container">
+    </div>
     <ul id="menu"></ul>
-    <script src="index.js"></script>
+ 
+    
+    <script src="./index.js" defer></script>
 </body>
 </html>
