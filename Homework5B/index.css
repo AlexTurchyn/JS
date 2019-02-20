@@ -1,0 +1,250 @@
+@font-face {
+    font-family: downloadFonts;
+    src: url(./fonts/Monotype-corsiva.ttf);
+}
+*{
+    list-style: none;
+}
+.grid {
+    display: inline-block;
+}
+.list {
+    display: block;
+}
+
+.card{
+    width: 225px;
+    padding: 4px;
+    border-width: 3px;
+    border-right-style: solid;
+    border-image: 
+      linear-gradient(
+        to top, 
+        rgba(255, 145, 0, 0.842), 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
+    /* border: 4px inset rgb(104, 104, 105); */
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+    color: antiquewhite;
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+/*rgb(41, 221, 41);*/
+.flip_effect_vertical {
+
+    width:224px; 
+    height:224px; 
+    position: relative; 
+     
+    transition:1s; /* скорость поворота */
+    transform-style: preserve-3d; /* стиль трансформирования 3-д */
+}
+.flip_effect_vertical:hover {
+
+        transform: rotateY(180deg); /* поворачиваем на 180 градусов по горизон*/
+}
+.flip_effect_vertical .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip_effect_vertical .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+    transform: rotateY(180deg);
+}
+
+.block {
+    background: #fff;
+    text-align: center;
+    width: 225px;
+    z-index: 2;
+    padding-bottom: 7px;
+
+}
+.block ul{margin: 0px; padding: 0px; padding-top: 7px;}
+.block li {border-bottom: 1px dimgray solid; margin: 0px; padding: 0px; padding-top: 7px; cursor: pointer}
+.spoiler{ margin-left: -15px;}
+.spoiler > .block {display: none; position: absolute;}
+.spoiler > input:checked + .block {display: block;}
+#label_filling { display: block; color: rgb(95, 91, 91); font-size: 1.1em; text-align: center; padding: 0px; margin: 0px;}
+#label_filling:hover {cursor: pointer; text-decoration: underline;}
+
+.delete{
+    text-decoration: line-through;
+}
+
+.pizza-definiton {
+    padding-left: 15px;
+    color: rgb(95, 91, 91);
+}
+.pizza-definition-details {
+    color: green;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.pizza-definition-name {
+    color: crimson;
+    text-align: center; 
+    font-weight: bolder;
+    margin: 5px 0px 10px -15px;
+}
+.Calories {
+    font-size: 15px;
+    margin:2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+.Price {
+    margin: 5px;
+}
+.menu-filter{
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-left: 7px;
+    display: inline-block;
+}
+/* .pizza-list-def{
+
+} */
+.hidden{
+    display: none;
+}
+.label_container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+.select_container {
+    /* display: block; */
+    background: #283034  ;
+    padding: 10px;
+    margin: 5px 20px 5px 7px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: antiquewhite;
+    border-radius: 3.4px;
+}
+
+.transformed{transition: 1s; transform: rotate3d(0,1,0,360deg); z-index:-1} 
+#container {
+    position: relative;
+    margin-top: 25px;
+    padding: 20px;
+}
+
+/* #additionFillings {
+    border: 3px solid #FFAB2E ;
+} */
+
+#additionFillings {
+    position: fixed;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1.5px solid green;
+    text-align: center;
+    height: 50vh;
+    width: 13vw;
+    overflow: auto;
+    box-sizing: border-box;
+  }
+#additionFillings ul {
+    position: relative;
+    top: -5vh;
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
+#additionFillings li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    height: 1.3rem;
+}
+#additionFillings li:hover{background: rgb(197, 0, 40) ; color: rgb(180, 175, 175); font-weight: bolder; font-size: larger}
+#additionFillingsheader {
+    /* position: fixed; */
+    /* padding-top: -20px; */
+    display: inline-block;  
+    padding: 10px;
+    cursor: move;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 10;
+    background-color: green;
+    color: #fff;
+}
+
+.additionFillings-btn-closer{
+    height: 40px;
+    position: relative;
+    top: -5vh;
+    left: -5vw;
+    margin: 0px;
+    display:inline-block;
+    box-sizing: border-box;
+}
+.additionFillings-btn-closer:hover{
+    border: 3px solid  rgb(197, 0, 40);
+}
+  body {
+      position: relative;
+      background: whitesmoke;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+
+
+#pizzeria-rossa {
+    color: crimson;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 103px;
+    text-align: center;
+    background: whitesmoke;
+    margin: 0px;
+}
+
+#italian-line {
+    background: linear-gradient(to right, green 33% ,white 33%,white 66%,red 66%);
+    padding-top:  1rem;
+    padding-bottom: 0px;
+    margin-bottom: 70px;
+}
+
+#menu-label{
+    font-size: 55px;
+    font-family: downloadFonts;
+    text-align: center;
+    color: crimson;
+    margin: 0px;
+    line-height: unset;
+    /* border: 1px solid fuchsia; */
+
+    /* margin: -35px 0px 0px; */
+    /* margin-top: -10px;    */
+}
+#btn_filling {
+    background: green;
+    right: -3vw;
+    bottom: 25vh;
+
+    width: 170px;
+    height: 35px;
+    position: fixed;
+    z-index: 3;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+#btn_filling p{
+    text-align: center;
+    line-height: 100%;
+    color:white;
+    font-size: 1.2rem;
+    margin-top: 6px; 
+}
