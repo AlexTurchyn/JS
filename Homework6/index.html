@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Rossa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="italian-line">
+        <p id="pizzeria-rossa">Pizza Rossa</p>
+        <div class="header_bag">
+            <a href="./bascket Page.html" class="ref bag">
+                <img src="./images/bag.png" alt="bag">
+                <span class="text_bag">Корзина</span>
+                <div class="counter">
+                    <span class="ordersCounter">0</span>
+                </div>
+            </a>
+        </div>
+        <p id="menu-label">Пиццы</p>
+    </div>
+
+
+    <label for="select-menu-view" class="label_container">Отображать меню в виде:</label>
+    <select name="" id="select-menu-view" class="select_container">
+        <option value = "grid">Сетка</option>
+        <option value= "list">Список</option>
+    </select>
+    <div id="div_ingridient" class="menu-filter">
+        <label for="text" class="label_container">Поиск пиццы по ингридиенту</label>
+        <input type="text"  id="text" placeholder="Моцарелла" class="select_container">
+    </div>
+    <div id="div_sort" class="menu-filter">
+        <label for="select" class="label_container">Сортировать:</label>
+        <select name="" id="select" class="select_container">
+            <option value="priceUp" >Цена (от дешевых к дорогим) </option>
+            <option value="priceDown">Цена (от дорогих к дешевым)</option>
+            <option value="A-Z" selected>Название От (А дo Я)</option>
+            <option value="Z-A">Название От (Я до А)</option>
+        </select>
+    </div>
+
+
+    <div id="additionFillings" class="hidden">
+        <div id="additionFillingsheader">Кликни чтобы перетащить</div>
+        <button class="additionFillings-btn-closer">&#10008;</button>
+        <ul></ul>
+    </div>
+    
+
+    <div id="container">
+    </div>
+    <ul id="menu"></ul>
+    <div class="line"><p class=" label_container line-label ">Не нашел по вкусу, собери САМ!)</p></div>
+    
+
+    <div class="custom-pizza">
+        <div  class="menu-filter">
+            <label for="custom-pizza-name" class="label_container">Введите свое название пиццы:     </label>
+            <br/>
+            <br/>
+            <label for="select-ingridient" class="label_container">Ингридиенты:</label>   
+        </div>
+        <div  class="menu-filter">
+            <input type="text" id= "custom-pizza-name" placeholder="Название" class="select_container">
+            <br/>
+            <select  id="select-ingridient" class="select_container">
+            </select>
+        </div>
+        <div id="ing" class="menu-filter">
+        </div>
+        <div class="pizza-definiton ">
+            <p class="Calories">Калорий: <span id="pizza-custom-calories"></span></p>
+            <p class="Price">Цена: <span id="pizza-custom-cost" class="pizza-definition-details" >400грн</span></p>
+        </div>
+        <a id="custom-pizza-btn-create"class="button2 label_container">Создать</a>
+    </div>
+    
+    <script src="./index.js" defer></script>
+    <script src="./temp.js" defer></script>
+</body>
+</html>
